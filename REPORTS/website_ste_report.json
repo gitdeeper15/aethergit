@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-11-05T01:33:27",
+  "project": "AetherGit",
+  "domain": "computer_science",
+  "ste_enabled": true,
+  "website_directory": "/storage/emulated/0/Download/GITDEEPER_LAB_ZERO_V6/PROJECTS/EXPERIMENTAL/AetherGit/PUBLICATION/Netlify",
+  "paper_title": "Aethergit",
+  "keywords_count": 20,
+  "target_keywords": [
+    "three",
+    "data",
+    "equation",
+    "form",
+    "baseline",
+    "agentic",
+    "beta",
+    "renaissance",
+    "following",
+    "calculus"
+  ],
+  "sections_count": 6,
+  "keywords_found_in_website": [
+    "data",
+    "form"
+  ],
+  "consistency_percentage": 20.0
+}

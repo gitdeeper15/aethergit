@@ -1,0 +1,81 @@
+cff-version: 1.2.0
+title: "AetherGit: Scalable Source Control for Autonomous AI Agents"
+message: "If you use this research, data, or code, please cite as below."
+type: software
+version: "1.0.0"
+date-released: "2026-11-05"
+license: MIT
+abstract: |
+  AetherGit is a high-throughput, always-online version control
+  framework designed specifically for agentic software engineering.
+  By decoupling incremental changesets from recursively computed
+  derived metadata and enforcing strict client-server asymmetry,
+  AetherGit eliminates repository packfiles, lock-heavy merge
+  queues, and full history fetching.
+
+  The framework is built on three formal definitions: a Repository
+  State Space (DAG topology), a Recursive Derived State (Φ_D
+  calculus), and a Cache Hit Probability (P(Hit) ≥ 1 − ε). It is
+  specified through four architectural pillars: client-server
+  asymmetry, sparse and virtualized checkouts, lock-free changesets,
+  and tiered cache topology.
+
+  The paper reports architectural benchmarks (30,000+ merges/day,
+  1.5–4.0s checkout latency, 99.4% cache hit ratio) derived from
+  formal analysis and comparison, not independently verified
+  empirical results.
+keywords:
+  - version control
+  - distributed systems
+  - agentic software engineering
+  - changesets
+  - derived data
+  - repository architecture
+  - scalability
+  - aethergit
+authors:
+  - family-names: "Baladi"
+    given-names: "Samir"
+    email: "gitdeeper@gmail.com"
+    orcid: "https://orcid.org/0009-0003-8903-0029"
+    affiliation: "Ronin Institute / Rite of Renaissance"
+repository-code: "https://github.com/gitdeeper15/AetherGit"
+url: "https://aethergit.netlify.app"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23966896"
+  - type: url
+    value: "https://doi.org/10.5281/zenodo.23966896"
+  - type: doi
+    value: "10.6084/m9.figshare.34922532"
+  - type: url
+    value: "https://doi.org/10.6084/m9.figshare.34922532"
+  - type: doi
+    value: "10.17605/OSF.IO/NCWZA"
+  - type: url
+    value: "https://osf.io/zk532"
+
+
+  - type: url
+    value: "https://github.com/gitdeeper15/AetherGit"
+  - type: url
+    value: "https://gitlab.com/gitdeeper15/AetherGit"
+  - type: url
+    value: "https://codeberg.org/gitdeeper15/AetherGit"
+  - type: url
+    value: "https://bitbucket.org/gitdeeper15/AetherGit"
+  - type: url
+    value: "https://pypi.org/project/AetherGit"
+  - type: url
+    value: "https://aethergit.netlify.app"
+references:
+  - type: software
+    title: "Scion: Rethinking Source Control for Agentic Software Engineering"
+    authors:
+      - family-names: "Baladi"
+        given-names: "Samir"
+        orcid: "https://orcid.org/0009-0003-8903-0029"
+    version: "1.0.0"
+    date-released: "2026"
+    doi: "10.5281/zenodo.23934465"
+    url: "https://doi.org/10.5281/zenodo.23934465"

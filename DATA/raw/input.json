@@ -1,0 +1,18 @@
+{
+  "_schema": "AetherGit/DATA/raw/input",
+  "_version": "1.0.0",
+  "_status": "EMPTY — awaiting empirical evaluation",
+  "_description": "Raw input data for empirical evaluation of AetherGit against hyper-scale monorepos. No data has been collected. This file is a structural placeholder.",
+  "_note": "No empirical work has been performed under this protocol. Benchmarking against Git, Piper, and Sapling/Mononoke remains to be conducted.",
+  "metadata": {
+    "project": "AetherGit",
+    "version": "1.0.0",
+    "stage": "formalization",
+    "collection_status": "NOT_STARTED",
+    "last_updated": "2026-11-05"
+  },
+  "systems": [],
+  "benchmarks": [],
+  "metrics": [],
+  "comparisons": []
+}

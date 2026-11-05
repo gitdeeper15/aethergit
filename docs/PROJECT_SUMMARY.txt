@@ -1,0 +1,31 @@
+# AetherGit - Project Summary
+
+**Domain:** computer_science
+**Subdiscipline:** N/A
+**Truth Score:** 85.0
+**Stage:** EXPERIMENTAL
+
+## Entities:
+- AetherGit Changeset Model, Core System, 0.88
+- AetherGit Derived Data Calculus, Core System, 0.85
+- AetherGit Three-Tier Cache Topology, Core System, 0.82
+- Git (Baseline), Comparator System, 0.72
+- Piper (Google), Comparator System, 0.78
+- Sapling/Mononoke (Meta), Comparator System, 0.76
+- Spanner (Google), Infrastructure Component, 0.8
+- Anthropic Operational Figures, Self-Reported Data, 0.65
+- Repository State Space (DAG), Formal Definition, 0.9
+- Recursive Derived State (Φ_D), Formal Definition, 0.88
+- Cache Hit Probability (P(Hit) ≥ 1−ε), Formal Definition, 0.85
+- Client-Server Asymmetry, Architectural Pillar, 0.85
+- Sparse & Virtualized Checkouts, Architectural Pillar, 0.82
+- Lock-Free Changesets, Architectural Pillar, 0.8
+- Tiered Cache Topology, Architectural Pillar, 0.78
+- Always-Online Topology, Target Environment, 0.85
+- Agentic Workload, Target Variable, 0.85
+
+## Status:
+- Stage: EXPERIMENTAL
+- Quality Gate: PASSED
+
+Generated: 2026-11-05 01:33:34

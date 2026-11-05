@@ -1,0 +1,86 @@
+{
+  "manifest_version": "1.0",
+  "project": {
+    "name": "AetherGit",
+    "full_title": "AetherGit: Scalable Source Control for Autonomous AI Agents",
+    "version": "1.0.0",
+    "type": "research_paper",
+    "status": "formalization_stage",
+    "release_date": "2026-11-05",
+    "language": "en",
+    "doi": "10.5281/zenodo.23966896",
+    "doi_url": "https://doi.org/10.5281/zenodo.23966896"
+  },
+  "author": {
+    "name": "Samir Baladi",
+    "role": "Interdisciplinary AI Researcher",
+    "affiliation": "Ronin Institute / Rite of Renaissance",
+    "email": "gitdeeper@gmail.com",
+    "orcid": "0009-0003-8903-0029"
+  },
+  "formal_definitions": [
+    {
+      "id": "D1",
+      "name": "Changeset Tuple",
+      "statement": "cᵢ = ⟨δᵢ, P(cᵢ), τᵢ, σᵢ⟩",
+      "status": "defined"
+    },
+    {
+      "id": "D2",
+      "name": "Incremental Cost Model",
+      "statement": "Cost(cᵢ) = O(|δᵢ|)",
+      "status": "defined"
+    },
+    {
+      "id": "D3",
+      "name": "Recursive Derived-Data Operator",
+      "statement": "Deriv(cᵢ) = ⊕_D(δᵢ, {Deriv(p)})",
+      "status": "defined"
+    },
+    {
+      "id": "D4",
+      "name": "Cache-Hit Probability Bound",
+      "statement": "P(Hit) ≥ 1 − (λ_miss/μ_cache)^K · e^(−γ·T_ttl)",
+      "status": "defined"
+    }
+  ],
+  "architectural_pillars": [
+    "Client-Server Asymmetry",
+    "Sparse & Virtualized Checkouts",
+    "Lock-Free Changesets",
+    "Tiered Cache Topology"
+  ],
+  "performance_theorems": [
+    {
+      "id": "T1",
+      "name": "Time Complexity",
+      "statement": "Cost(cᵢ) = O(|δᵢ|)",
+      "status": "proven"
+    },
+    {
+      "id": "T2",
+      "name": "Cache Bound",
+      "statement": "P(Hit) ≥ 1 − ε",
+      "status": "proven"
+    }
+  ],
+  "empirical_work": false,
+  "causal_claims": "none",
+  "links": {
+    "github": "https://github.com/gitdeeper15/AetherGit",
+    "gitlab": "https://gitlab.com/gitdeeper15/AetherGit",
+    "codeberg": "https://codeberg.org/gitdeeper15/AetherGit",
+    "bitbucket": "https://bitbucket.org/gitdeeper15/AetherGit",
+    "zenodo": "https://doi.org/10.5281/zenodo.23966896",
+    "figshare": "https://doi.org/10.6084/m9.figshare.34922532",
+    "figshare_doi": "10.6084/m9.figshare.34922532",
+    "website": "https://aethergit.netlify.app",
+    "orcid": "https://orcid.org/0009-0003-8903-0029",
+    "osf": "https://osf.io/zk532",
+    "osf_doi": "10.17605/OSF.IO/NCWZA"
+  },
+  "license": {
+    "code": "MIT",
+    "manuscript_figures_documentation": "CC-BY-4.0"
+  }
+}

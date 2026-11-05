@@ -1,0 +1,46 @@
+{
+  "project": "AetherGit",
+  "version": "1.0.0",
+  "date": "2026-11-05",
+  "status": "formalization_stage",
+  "formal_definitions": {
+    "repository_state_space": {
+      "type": "DAG",
+      "notation": "G = (V, E)",
+      "changeset_tuple": "c_i = <P(c_i), Δ_i, t_i, sig_i>",
+      "status": "defined"
+    },
+    "recursive_derived_state": {
+      "operator": "Φ_D",
+      "recursion": "D(c_i) = Φ_D({D_p | p ∈ P(c_i)}, Δ_i)",
+      "status": "defined"
+    },
+    "cache_hit_probability": {
+      "bound": "P(Hit) = 1 - ∏(1 - h_k) ≥ 1 - ε",
+      "immutability": "∂ CacheState / ∂ Time = 0",
+      "status": "defined"
+    }
+  },
+  "architectural_pillars": [
+    "client_server_asymmetry",
+    "sparse_virtualized_checkouts",
+    "lock_free_changesets",
+    "tiered_cache_topology"
+  ],
+  "performance_theorems": {
+    "time_complexity": "O(|Δ|)",
+    "cache_bound": "P(Hit) ≥ 1 - ε"
+  },
+  "open_research_questions": [
+    "OQ1: Latency cost of on-demand derived-data computation under high concurrent load",
+    "OQ2: Scope of functional decentralization in practice"
+  ],
+  "empirical_evaluation": {
+    "status": "not_executed",
+    "reason": "formalization stage only"
+  },
+  "causal_claims": {
+    "status": "none",
+    "reason": "formal analysis only"
+  }
+}

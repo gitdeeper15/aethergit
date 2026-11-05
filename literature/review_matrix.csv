@@ -1,0 +1,10 @@
+category_id,category_name,category_type,git,piper,sapling_scion,distributed_systems,agentic_engineering,overall_classification,notes
+D1,Repository State Space,definition,A,B,B,B,C,Reorganized,DAG topology is standard; changeset tuple is novel in its completeness
+D2,Recursive Derived State,definition,C,A,B,B,C,Reorganized,Server-side derived data exists in Piper and Sapling; Φ_D formalization is novel
+D3,Cache Hit Probability,definition,C,C,B,B,C,Distinct,Probabilistic cache bound with content-addressing immutability is not formalized elsewhere
+P1,Client-Server Asymmetry,pillar,A,A,A,C,C,Redundant,Well-established in Piper and Sapling/Mononoke
+P2,Sparse Virtualized Checkouts,pillar,C,B,A,C,C,Reorganized,Sparse checkouts exist in Git; virtualized on-demand is novel
+P3,Lock-Free Changesets,pillar,C,B,B,B,C,Distinct,Lock-free changeset ingestion with CAS is not formalized in existing VCS
+P4,Tiered Cache Topology,pillar,C,C,B,C,C,Reorganized,Tiered caching exists in distributed systems; not in VCS
+T1,Time Complexity O(|Δ|),theorem,C,C,B,B,C,Distinct,O(|Δ|) time complexity for changeset ingestion is not formally proven in existing VCS
+T2,Cache Bound P(Hit) ≥ 1−ε,theorem,C,C,C,C,C,Distinct,Probabilistic cache bound with strict immutability is not formalized elsewhere

@@ -1,0 +1,36 @@
+Project: AetherGit
+Full Title: AetherGit: Scalable Source Control for Autonomous AI Agents
+Domain: Computer Science / Software Engineering
+Subdiscipline: Distributed Systems, Version Control Systems
+Truth Score: 100
+Stage: FORMALIZATION
+Version: 1.0.0
+Date: 2026-11-05
+
+Formal Definitions: 3
+  - Definition 1: Repository State Space (DAG)
+  - Definition 2: Recursive Derived State (Φ_D)
+  - Definition 3: Cache Hit Probability (P(Hit) ≥ 1−ε)
+
+Architectural Pillars: 4
+  - Client-Server Asymmetry
+  - Sparse & Virtualized Checkouts
+  - Lock-Free Changesets
+  - Tiered Cache Topology
+
+Performance Theorems: 2
+  - O(|Δ|) time complexity
+  - P(Hit) ≥ 1−ε cache bounds
+
+Open Research Questions: 2
+  - OQ1: Latency cost of on-demand derived-data computation
+  - OQ2: Scope of functional decentralization
+
+Empirical Evaluation: Not executed
+Causal Claims: None (formal analysis)
+
+Author: Samir Baladi
+ORCID: 0009-0003-8903-0029
+Affiliation: Ronin Institute / Rite of Renaissance
+DOI: 10.5281/zenodo.23966896
+Website: https://aethergit.netlify.app

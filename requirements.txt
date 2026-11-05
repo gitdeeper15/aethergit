@@ -1,0 +1,6 @@
+# Python dependencies for AetherGit
+# No runtime dependencies are required at the formalization stage.
+# Dependencies below are for future empirical work (benchmarking).
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0

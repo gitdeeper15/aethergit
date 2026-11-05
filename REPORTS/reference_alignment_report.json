@@ -1,0 +1,248 @@
+{
+  "total_claims": 0,
+  "aligned_claims": 0,
+  "aligned_refs": [],
+  "unaligned_refs": [
+    {
+      "id": 1,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "T. Holvoet (2005). Decentralized control of autonomous guided vehicles for scalable warehouse system..."
+    },
+    {
+      "id": 2,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "David L Justice (2026). Constitutional Governance for Autonomous AI Agents: The Execution Authority ..."
+    },
+    {
+      "id": 3,
+      "domain_score": 0.02,
+      "is_irrelevant": false,
+      "text": "Meenakshi Munjal, Rajanish Kumar Kaushal (2026). Quantum machine learning for autonomous agents. Cro..."
+    },
+    {
+      "id": 4,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Unknown (2026). Future Horizons: Beyond Agents. CrossRef. https://doi.org/10.1002/9781394430925.ch14..."
+    },
+    {
+      "id": 5,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "E. Chandra Blessie, B. Sundaravadivazhagan, A. Gokilavani (2026). 325Chapter 14 Deploying Agentic AI..."
+    },
+    {
+      "id": 6,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Lavkesh Dwivedi (2026). Escape Vectors of Autonomous AI Agents: An Attack Surface Analysis of Guardr..."
+    },
+    {
+      "id": 7,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Leela Sai Krishna Udiga (2026). Identity and Access Control for Autonomous AI Agents: Dual-Principal..."
+    },
+    {
+      "id": 8,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "David Tom Foss (2026). HoneyPrompt: Multi-Sensor Fusion for Detection and Classification of Autonomo..."
+    },
+    {
+      "id": 9,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Unknown (2026). Front Matter. CrossRef. https://doi.org/10.1002/9781394430925.fmatter..."
+    },
+    {
+      "id": 10,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Camille Stewart Gloster (2026). The Insider You Built. CrossRef. https://doi.org/10.1002/97813944309..."
+    },
+    {
+      "id": 11,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Ryan Yates (2025). Future Trends in Securing Autonomous AI Agents. CrossRef. https://doi.org/10.4018..."
+    },
+    {
+      "id": 12,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Unknown (2026). Acknowledgments. CrossRef. https://doi.org/10.1002/9781394430925.ack..."
+    },
+    {
+      "id": 13,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Freeman Jackson (2025). Governing Autonomous AI Agents with Policy-as-Code: A Multi-Layer Architectu..."
+    },
+    {
+      "id": 14,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Unknown (2026). Index. CrossRef. https://doi.org/10.1002/9781394430925.index..."
+    },
+    {
+      "id": 15,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Velmurugan R., Bhuvaneswari R., Joji Abey (2025). Building AI Agents for Autonomous Decision-Making...."
+    },
+    {
+      "id": 16,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Unknown (2026). The Next Frontier\u2014The Age of Autonomous Agents and the Unstoppable Ascent of Open So..."
+    },
+    {
+      "id": 17,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Shanmugaraja Krishnasamy Venugopal, Shivam Ashokbhai Lalakiya, Rashmi Bharathan (2025). Enterprise A..."
+    },
+    {
+      "id": 18,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Mohammed Waseem Ashfaque, Ghaliya AlFarsi, Yasser Wazery (2026). Introduction to agentic AI, AI agen..."
+    },
+    {
+      "id": 19,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Renan Maestri (2026). Building Autonomous AI Agents for Scientific Research. CrossRef. https://doi.o..."
+    },
+    {
+      "id": 20,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Unknown (2026). Governing Under Pressure. CrossRef. https://doi.org/10.1002/9781394430925.part4..."
+    },
+    {
+      "id": 21,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Unknown (2026). About the Author. CrossRef. https://doi.org/10.1002/9781394430925.about..."
+    },
+    {
+      "id": 22,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Unknown (2026). Trust Under Uncertainty. CrossRef. https://doi.org/10.1002/9781394430925.ch12..."
+    },
+    {
+      "id": 23,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Konstantinos I. Roumeliotis, Ranjan Sapkota (2026). OpenClaw and Ollama in Agentic AI: Toward Fully ..."
+    },
+    {
+      "id": 24,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Timothy Verstraeten, Pieter-Jan Daems, Eugenio Bargiacchi (2021). Scalable Optimization for Wind Far..."
+    },
+    {
+      "id": 25,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "M. Fisher (2005). Agents out of control? Towards the formal verification of autonomous agent teams. ..."
+    },
+    {
+      "id": 26,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Alexei Robsky, Liliya Lavitas, Yueqing Wang (2026). Evaluating AI Agents. CrossRef. https://doi.org/..."
+    },
+    {
+      "id": 27,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Nadeem Jamali, Xinghui Zhao (2005). A scalable approach to multi-agent resource acquisition and cont..."
+    },
+    {
+      "id": 28,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Unknown (2026). The Insider You Built. CrossRef. https://doi.org/10.1002/9781394430925.ch1..."
+    },
+    {
+      "id": 29,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Unknown (2026). Leading Through Agent\u2010Driven Incidents. CrossRef. https://doi.org/10.1002/9781394430..."
+    },
+    {
+      "id": 30,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Kristin L. Milchanowski (2026). Return on Intelligence. CrossRef. https://doi.org/10.4324/9781003749..."
+    },
+    {
+      "id": 31,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Unknown (2026). The Authority\u2010Centered Enforcement Framework. CrossRef. https://doi.org/10.1002/9781..."
+    },
+    {
+      "id": 32,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Unknown (2026). Case Studies: Failures and Fixes. CrossRef. https://doi.org/10.1002/9781394430925.ch..."
+    },
+    {
+      "id": 33,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Unknown (2026). Distributed Causality and Systemic Attribution. CrossRef. https://doi.org/10.1002/97..."
+    },
+    {
+      "id": 34,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "DILEEP VARMA VIRODHULA (2025). AI Agents: The Future of Autonomous Intelligence. CrossRef. https://d..."
+    },
+    {
+      "id": 35,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Tony Noel (2026). Purpose-Built Payment Infrastructure for Autonomous AI Agents. CrossRef. https://d..."
+    },
+    {
+      "id": 36,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Unknown (2026). Where Current Frameworks Break Down. CrossRef. https://doi.org/10.1002/9781394430925..."
+    },
+    {
+      "id": 37,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Unknown (2026). 427Index. CrossRef. https://doi.org/10.1515/9783112223062-019..."
+    },
+    {
+      "id": 38,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Vladimir Suvorov (2026). Qualia as control-theoretic constructs for autonomous agents: event phase s..."
+    },
+    {
+      "id": 39,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Virginia Dignum (2025). Responsible AI and Autonomous Agents: Governance, Ethics, and Sustainable In..."
+    },
+    {
+      "id": 40,
+      "domain_score": 0.0,
+      "is_irrelevant": false,
+      "text": "Narasimharao Davuluri (2026). Agentic AI and the Rise of Autonomous Digital Agents. CrossRef. https:..."
+    }
+  ],
+  "details": []
+}

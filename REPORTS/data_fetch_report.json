@@ -1,0 +1,29 @@
+{
+  "project": "AetherGit",
+  "database": "/storage/emulated/0/Download/GITDEEPER_LAB_ZERO_V6/DATA/lab_data.db",
+  "version": "V3-universal-dynamic",
+  "total_entities": 17,
+  "updated": 0,
+  "failed": 17,
+  "updated_entities": [],
+  "failed_entities": [
+    "AetherGit Changeset Model",
+    "AetherGit Derived Data Calculus",
+    "AetherGit Three-Tier Cache Topology",
+    "Git (Baseline)",
+    "Piper (Google)",
+    "Sapling/Mononoke (Meta)",
+    "Spanner (Google)",
+    "Anthropic Operational Figures",
+    "Repository State Space (DAG)",
+    "Recursive Derived State (Φ_D)",
+    "Cache Hit Probability (P(Hit) ≥ 1−ε)",
+    "Client-Server Asymmetry",
+    "Sparse & Virtualized Checkouts",
+    "Lock-Free Changesets",
+    "Tiered Cache Topology",
+    "Always-Online Topology",
+    "Agentic Workload"
+  ],
+  "api_indicators_fetched": 27
+}

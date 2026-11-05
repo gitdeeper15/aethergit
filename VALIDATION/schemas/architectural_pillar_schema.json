@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "AetherGit/validation/architectural_pillar_schema",
+  "title": "Architectural Pillar Validation",
+  "description": "Validates that an architectural pillar is complete and consistent with the AetherGit framework.",
+  "type": "object",
+  "required": ["pillar_id", "name", "description", "status"],
+  "properties": {
+    "pillar_id": {
+      "type": "string",
+      "enum": ["P1", "P2", "P3", "P4"]
+    },
+    "name": {
+      "type": "string",
+      "enum": [
+        "Client-Server Asymmetry",
+        "Sparse & Virtualized Checkouts",
+        "Lock-Free Changesets",
+        "Tiered Cache Topology"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["specified", "pending", "invalid"]
+    },
+    "implications": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

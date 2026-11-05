@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "AetherGit/validation/performance_theorem_schema",
+  "title": "Performance Theorem Validation",
+  "description": "Validates that a performance theorem is formally stated and proven.",
+  "type": "object",
+  "required": ["theorem_id", "name", "statement", "status"],
+  "properties": {
+    "theorem_id": {
+      "type": "string",
+      "enum": ["T1", "T2"]
+    },
+    "name": {
+      "type": "string",
+      "enum": [
+        "Time Complexity",
+        "Cache Bound"
+      ]
+    },
+    "statement": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["proven", "pending", "invalid"]
+    },
+    "proof_sketch": {
+      "type": "string"
+    }
+  }
+}
