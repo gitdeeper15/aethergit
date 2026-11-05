@@ -152,6 +152,7 @@
 
 | Figure | File | Status |
 |---|---|---|
+| **Combined Architecture** | `figures/aethergit_architecture_and_performance_formalization.png` | ✅ Added |
 | 1 — Repository State Space (DAG) | `figures/fig1_state_space.png` | ✅ Added |
 | 2 — Recursive Derived State | `figures/fig2_derived_state.png` | ✅ Added |
 | 3 — Three-Tier Cache Topology | `figures/fig3_cache_topology.png` | ✅ Added |

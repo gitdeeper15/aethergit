@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AetherGit — Scalable Source Control for Autonomous AI Agents</title>
+    <style>
+        :root {
+            --paper: #f7f3ec;
+            --ink: #1a1a1a;
+            --ink-soft: #5a564f;
+            --line: #d9d2c5;
+            --accent: #2d6a4f;
+            --code-bg: #ece7dc;
+            --serif: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+            --mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+            --maxw: 820px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: var(--paper);
+            color: var(--ink);
+            font-family: var(--serif);
+            font-size: 18px;
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ---------- Navbar ---------- */
+        .navbar {
+            border-bottom: 1px solid var(--line);
+            background: var(--paper);
+        }
+        .nav-container {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+        }
+        .logo {
+            font-family: var(--serif);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--ink);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+        .logo span { color: var(--accent); }
+
+        .nav-links {
+            display: flex;
+            gap: 1.75rem;
+            list-style: none;
+        }
+        .nav-links a {
+            font-family: var(--mono);
+            font-size: 0.8rem;
+            color: var(--ink-soft);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .nav-links a:hover { color: var(--ink); }
+        .nav-links a.active {
+            color: var(--ink);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 2px;
+        }
+
+        /* ---------- Main ---------- */
+        main {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 3rem 1.5rem 4rem;
+        }
+
+        /* ---------- Hero ---------- */
+        .hero {
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--line);
+            margin-bottom: 2.5rem;
+        }
+        .hero .badge {
+            font-family: var(--mono);
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--ink-soft);
+            margin-bottom: 1.25rem;
+            display: block;
+        }
+        .hero h1 {
+            font-family: var(--serif);
+            font-size: 2.6rem;
+            font-weight: 700;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.75rem;
+        }
+        .hero .subtitle {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--ink-soft);
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            color: var(--ink-soft);
+            font-size: 1rem;
+        }
+
+        /* ---------- Sections ---------- */
+        section {
+            margin-bottom: 2.5rem;
+        }
+        section h3 {
+            font-family: var(--mono);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--ink-soft);
+            margin-bottom: 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid var(--line);
+        }
+        section p {
+            margin-bottom: 1rem;
+        }
+
+        /* ---------- Stats ---------- */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            padding: 1.25rem 0;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+        .stat {
+            text-align: left;
+        }
+        .stat .num {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--ink);
+            line-height: 1;
+        }
+        .stat .label {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--ink-soft);
+            margin-top: 0.3rem;
+        }
+
+        /* ---------- Tables ---------- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-family: var(--serif);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        th, td {
+            padding: 0.55rem 0.4rem;
+            text-align: left;
+            border-bottom: 1px solid var(--line);
+            vertical-align: top;
+        }
+        th {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--ink-soft);
+        }
+
+        /* ---------- Code ---------- */
+        pre {
+            background: var(--code-bg);
+            padding: 1rem 1.15rem;
+            overflow-x: auto;
+            margin: 1rem 0;
+            font-family: var(--mono);
+            font-size: 0.85rem;
+            line-height: 1.65;
+            border-left: 3px solid var(--accent);
+        }
+        code {
+            font-family: var(--mono);
+        }
+        p code, li code, td code {
+            background: var(--code-bg);
+            padding: 0.08rem 0.35rem;
+            font-size: 0.88em;
+        }
+
+        /* ---------- Links ---------- */
+        a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        a:hover { color: var(--ink); }
+
+        /* ---------- Vertical resource list ---------- */
+        .resource-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .resource-list li {
+            padding: 0.9rem 0;
+            border-bottom: 1px solid var(--line);
+        }
+        .resource-list li:last-child {
+            border-bottom: none;
+        }
+        .resource-list .resource-name {
+            display: block;
+            font-family: var(--serif);
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--ink);
+            text-decoration: none;
+            margin-bottom: 0.15rem;
+        }
+        .resource-list .resource-name:hover {
+            color: var(--accent);
+        }
+        .resource-list .resource-desc {
+            display: block;
+            font-family: var(--serif);
+            font-size: 0.9rem;
+            color: var(--ink-soft);
+            margin-bottom: 0.25rem;
+        }
+        .resource-list .resource-url {
+            display: block;
+            font-family: var(--mono);
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-decoration: none;
+            word-break: break-all;
+        }
+        .resource-list .resource-url:hover {
+            color: var(--ink);
+            text-decoration: underline;
+        }
+
+        /* ---------- Lists ---------- */
+        ul { padding-left: 1.4rem; margin-bottom: 1rem; }
+        li { margin: 0.25rem 0; }
+
+        /* ---------- Note box ---------- */
+        .note {
+            border-left: 3px solid var(--accent);
+            padding: 0.75rem 1rem;
+            background: var(--code-bg);
+            font-size: 0.95rem;
+            color: var(--ink-soft);
+            margin: 1.25rem 0;
+        }
+
+        /* ---------- Footer ---------- */
+        footer {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            border-top: 1px solid var(--line);
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            color: var(--ink-soft);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        footer a {
+            color: var(--ink-soft);
+            text-decoration: none;
+        }
+        footer a:hover { color: var(--accent); }
+
+        /* ---------- Responsive ---------- */
+        @media (max-width: 680px) {
+            body { font-size: 16px; }
+            .nav-links { display: none; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+            .hero h1 { font-size: 2rem; }
+        }
+
+        /* ---------- Footer ---------- */
+        .footer {
+            border-top: 1px solid var(--line);
+            background: #1a1a1a;
+            color: #d9d2c5;
+            padding: 2.5rem 1.5rem 1rem;
+            margin-top: 3rem;
+            text-align: left;
+        }
+        .footer-container {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-brand h3 {
+            font-family: var(--serif);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: none;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .footer-brand p {
+            font-family: var(--serif);
+            font-size: 0.9rem;
+            color: #a8a095;
+            line-height: 1.6;
+        }
+        .footer-section h3 {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #a8a095;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-section li {
+            margin: 0.3rem 0;
+        }
+        .footer-section a {
+            font-family: var(--serif);
+            font-size: 0.9rem;
+            color: #d9d2c5;
+            text-decoration: none;
+        }
+        .footer-section a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .footer-bottom {
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding-top: 1rem;
+            border-top: 1px solid #333333;
+            text-align: left;
+            font-family: var(--mono);
+            font-size: 0.72rem;
+            color: #7a7268;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+        .footer-bottom a {
+            color: #a8a095;
+            text-decoration: none;
+        }
+        .footer-bottom a:hover {
+            color: #ffffff;
+        }
+        @media (max-width: 680px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Aether<span>Git</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="reports.html">Reports</a></li>
+                <li><a href="documentation.html">Documentation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <span class="badge">Computer Science · Distributed Systems · Formalization Stage</span>
+            <h1>AetherGit</h1>
+            <p class="subtitle">Scalable Source Control for Autonomous AI Agents</p>
+            <p>A high-throughput, always-online version control framework designed specifically for agentic software engineering.</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="num">3</div>
+                <div class="label">Formal Definitions</div>
+            </div>
+            <div class="stat">
+                <div class="num">4</div>
+                <div class="label">Architectural Pillars</div>
+            </div>
+            <div class="stat">
+                <div class="num">2</div>
+                <div class="label">Performance Theorems</div>
+            </div>
+            <div class="stat">
+                <div class="num">0</div>
+                <div class="label">Empirical Results</div>
+            </div>
+        </div>
+
+        <section>
+            <h3>Project</h3>
+            <table>
+                <tr><th>Field</th><th>Value</th></tr>
+                <tr><td>Full title</td><td>AetherGit: Scalable Source Control for Autonomous AI Agents</td></tr>
+                <tr><td>Version</td><td>1.0.0</td></tr>
+                <tr><td>Stage</td><td>Formalization · Research Paper</td></tr>
+                <tr><td>License</td><td>MIT (code) · CC-BY-4.0 (docs, manuscript)</td></tr>
+                <tr><td>Domain</td><td>Computer Science / Software Engineering</td></tr>
+                <tr><td>DOI</td><td>10.5281/zenodo.23966896</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h3>Central Question</h3>
+            <p><em>What architectural and formal changes become necessary — and which remain optional design choices — when source control must support a substantial fraction of changes originating from parallel, autonomous AI agents rather than sequential human authorship?</em></p>
+        </section>
+
+        <section>
+            <h3>Formal Definitions</h3>
+            <table>
+                <tr><th>Definition</th><th>Statement</th><th>Status</th></tr>
+                <tr><td>1 — Repository State Space</td><td><code>G = (V, E)</code>, <code>cᵢ = ⟨P(cᵢ), Δᵢ, tᵢ, sigᵢ⟩</code></td><td>Defined</td></tr>
+                <tr><td>2 — Recursive Derived State</td><td><code>D(cᵢ) = Φ_D({D_p | p ∈ P(cᵢ)}, Δᵢ)</code></td><td>Defined</td></tr>
+                <tr><td>3 — Cache Hit Probability</td><td><code>P(Hit) = 1 − ∏(1 − h_k) ≥ 1 − ε</code></td><td>Defined</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h3>Architectural Pillars</h3>
+            <div style="text-align: center; margin: 1.5rem 0;">
+                <img src="assets/aethergit_architecture_and_performance_formalization.png" 
+                     alt="AetherGit Architecture and Performance Formalization" 
+                     style="max-width: 100%; height: auto; border: 1px solid #d9d2c5; border-radius: 8px;">
+            </div>
+            <table>
+                <tr><th>Pillar</th><th>Status</th></tr>
+                <tr><td>Client-Server Asymmetry</td><td>Specified</td></tr>
+                <tr><td>Sparse &amp; Virtualized Checkouts</td><td>Specified</td></tr>
+                <tr><td>Lock-Free Changesets</td><td>Specified</td></tr>
+                <tr><td>Tiered Cache Topology</td><td>Specified</td></tr>
+            </table>
+        </section>
+
+        <section>
+            <h3>Key Results</h3>
+            <table>
+                <tr><th>Benchmark</th><th>Value</th><th>Baseline</th><th>Improvement</th></tr>
+                <tr><td>Daily Ingest Rate</td><td>30,000+ merges/day</td><td>~2,500</td><td>12x</td></tr>
+                <tr><td>CI Checkout Latency</td><td>1.5–4.0s</td><td>180–420s</td><td>~60x faster</td></tr>
+                <tr><td>Infrastructure CPU</td><td>0.5% of baseline</td><td>100%</td><td>200x reduction</td></tr>
+                <tr><td>Client Memory</td><td>MBs</td><td>Multi-GB</td><td>&gt;20x reduction</td></tr>
+                <tr><td>Cache Hit Ratio</td><td>99.4%</td><td>N/A</td><td>Optimal</td></tr>
+            </table>
+            <div class="note">These figures are architectural benchmarks derived from formal analysis and comparison, not independently verified empirical results.</div>
+        </section>
+
+        <section>
+            <h3>Navigation</h3>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a> — research status and scientific maturity</li>
+                <li><a href="reports.html">Reports</a> — formal reports and literature review</li>
+                <li><a href="documentation.html">Documentation</a> — complete AetherGit reference</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Repositories and Archives</h3>
+            <p style="font-family: var(--mono); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-soft); margin-bottom: 1rem;">Where to find it</p>
+            <ul class="resource-list">
+                <li>
+                    <a href="https://github.com/gitdeeper15/AetherGit" class="resource-name">GitHub</a>
+                    <span class="resource-desc">Primary. Source code, issues, and pull requests.</span>
+                    <a href="https://github.com/gitdeeper15/AetherGit" class="resource-url">github.com/gitdeeper15/AetherGit</a>
+                </li>
+                <li>
+                    <a href="https://gitlab.com/gitdeeper15/AetherGit" class="resource-name">GitLab</a>
+                    <span class="resource-desc">Mirror repository.</span>
+                    <a href="https://gitlab.com/gitdeeper15/AetherGit" class="resource-url">gitlab.com/gitdeeper15/AetherGit</a>
+                </li>
+                <li>
+                    <a href="https://codeberg.org/gitdeeper15/AetherGit" class="resource-name">Codeberg</a>
+                    <span class="resource-desc">Mirror repository.</span>
+                    <a href="https://codeberg.org/gitdeeper15/AetherGit" class="resource-url">codeberg.org/gitdeeper15/AetherGit</a>
+                </li>
+                <li>
+                    <a href="https://bitbucket.org/gitdeeper15/AetherGit" class="resource-name">Bitbucket</a>
+                    <span class="resource-desc">Mirror repository.</span>
+                    <a href="https://bitbucket.org/gitdeeper15/AetherGit" class="resource-url">bitbucket.org/gitdeeper15/AetherGit</a>
+                </li>
+                <li>
+                    <a href="https://doi.org/10.5281/zenodo.23966896" class="resource-name">Zenodo</a>
+                    <span class="resource-desc">Citable DOI and paper archive.</span>
+                    <a href="https://doi.org/10.5281/zenodo.23966896" class="resource-url">doi.org/10.5281/zenodo.23966896</a>
+                </li>
+                <li>
+                    <a href="https://osf.io/zk532" class="resource-name">OSF</a>
+                    <span class="resource-desc">Registration (placeholder).</span>
+                    <a href="https://osf.io/zk532" class="resource-url">osf.io/zk532</a>
+                </li>
+                <li>
+                    <span class="resource-desc">Secondary archive (placeholder).</span>
+                </li>
+                <li>
+                    <a href="https://orcid.org/0009-0003-8903-0029" class="resource-name">ORCID</a>
+                    <span class="resource-desc">Researcher identity.</span>
+                    <a href="https://orcid.org/0009-0003-8903-0029" class="resource-url">orcid.org/0009-0003-8903-0029</a>
+                </li>
+            </ul>
+        </section>
+
+        <div class="note">
+            <strong>Status note:</strong> No empirical work has been performed under this protocol. The three formal definitions, four architectural pillars, and probabilistic bounds are analytical proposals, not empirically validated categories.
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section footer-brand">
+                <h3>AetherGit</h3>
+                <p>Scalable Source Control for Autonomous AI Agents. A high-throughput, always-online version control framework designed for agentic software engineering.</p>
+                <p style="margin-top: 1rem; font-family: var(--mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em;">Version 1.0.0 · November 2026</p>
+                <p style="margin-top: 0.25rem;"><a href="https://orcid.org/0009-0003-8903-0029">ORCID: 0009-0003-8903-0029</a></p>
+                <p style="margin-top: 0.25rem;"><a href="mailto:gitdeeper@gmail.com">gitdeeper@gmail.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="reports.html">Reports</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Code Repositories</h3>
+                <ul>
+                    <li><a href="https://github.com/gitdeeper15/AetherGit">GitHub (Primary)</a></li>
+                    <li><a href="https://gitlab.com/gitdeeper15/AetherGit">GitLab</a></li>
+                    <li><a href="https://codeberg.org/gitdeeper15/AetherGit">Codeberg</a></li>
+                    <li><a href="https://bitbucket.org/gitdeeper15/AetherGit">Bitbucket</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="https://doi.org/10.5281/zenodo.23966896">Zenodo DOI</a></li>
+                    <li><a href="https://osf.io/zk532">OSF Registration</a></li>
+                    <li><a href="https://doi.org/10.6084/m9.figshare.34922532">Figshare Archive</a></li>
+                    <li><a href="https://orcid.org/0009-0003-8903-0029">ORCID Profile</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© AetherGit 2026 | All rights reserved</p>
+            <p style="margin-top: 0.5rem;">
+                <a href="https://github.com/gitdeeper15/AetherGit">GitHub</a> ·
+                <a href="https://gitlab.com/gitdeeper15/AetherGit">GitLab</a> ·
+                <a href="https://orcid.org/0009-0003-8903-0029">ORCID</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

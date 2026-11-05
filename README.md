@@ -273,6 +273,11 @@ AetherGit/
 │   ├── review_stage_2b.md
 │   └── synthesis_draft.md
 ├── figures/                            # Diagrams (Figures 1–4)
+│   ├── aethergit_architecture_and_performance_formalization.png
+│   ├── fig1_state_space.png
+│   ├── fig2_derived_state.png
+│   ├── fig3_cache_topology.png
+│   └── fig4_pillars.png
 ├── ANALYSIS/
 │   ├── ANALYSIS_REPORT.md
 │   └── analysis_insights.json

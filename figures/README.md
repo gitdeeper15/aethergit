@@ -53,6 +53,7 @@
 
 | Figure | File | Status |
 |---|---|---|
+| **Combined** | aethergit_architecture_and_performance_formalization.png | ✅ Added |
 | 1 | fig1_state_space.png | ✅ Added |
 | 2 | fig2_derived_state.png | ✅ Added |
 | 3 | fig3_cache_topology.png | ✅ Added |
