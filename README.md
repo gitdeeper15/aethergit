@@ -72,6 +72,18 @@ The program is specified through **four mathematically rigorous constructs**, de
 
 Development is strictly sequential: no further architectural work proceeds from a given construct until it is formalized.
 
+<p align="center">
+  <img src="figures/aethergit_architecture_and_performance_formalization.png" 
+       alt="AetherGit Architecture and Performance Formalization" 
+       width="100%">
+</p>
+
+<p align="center">
+  <em>Figure — AetherGit Architecture and Performance Formalization. 
+  (1) Repository State Space (DAG); (2) Recursive Derived State; 
+  (3) Three-Tier Cache Topology; (4) Four Architectural Pillars.</em>
+</p>
+
 ---
 
 ## The Central Question
